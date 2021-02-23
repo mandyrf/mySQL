@@ -1,1 +1,25 @@
+1. show databases; // 显示数据库
+mysql> show databases; //数据库命令要用分号结尾
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| performance_schema |
+| test               |
++--------------------+
+4 rows in set (0.01 sec) // 有四个库
 
+2. mysql> use test; // 打开一个数据库
+Database changed
+mysql> show tables;
+Empty set (0.00 sec)
+mysql> show tables from mysql; // 显示某个库中的表
+
+3. mysql> select database(); // 显示目前所在的库
++------------+
+| database() |
++------------+
+| test       |
++------------+  // 当前库为test库
+1 row in set (0.00 sec)
