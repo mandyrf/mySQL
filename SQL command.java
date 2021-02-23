@@ -1,5 +1,7 @@
+数据库命令要用分号结尾
+
 1. show databases; // 显示数据库
-mysql> show databases; //数据库命令要用分号结尾
+mysql> show databases; 
 +--------------------+
 | Database           |
 +--------------------+
