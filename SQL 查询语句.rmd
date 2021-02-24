@@ -31,3 +31,14 @@ mysql> SELECT CONCAT (id, `name`) FROM stuinfo;
 | 2jack               |
 +---------------------+
 1 row in set (0.00 sec) 
+
+================= 条件查询 =====================
+SELECT 查询列表
+FROM 表名
+WHERE 条件;  // where 相当于 if( )
+条件：表达式 > < = <> >= <=
+     逻辑 && || |， and  or not ， 连接条件表达式                                  
+     模糊查询 like, between and, in, is null
+SELECT *
+FROM employee
+WHERE salary > 12000;  // 查询顺序：1，找表名 2，寻找满足条件的行 3，显示行的列字段
