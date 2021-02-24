@@ -1,1 +1,33 @@
 # select 查询列表 from 表名；
+列表： 表中字段， 常量， 表达式， 函数
+1. mysql> select id, name from stuinfo; // 查询表中多个字段
++------+------+
+| id   | name |
++------+------+
+|    2 | jack |
++------+------+
+1 row in set (0.00 sec)
+
+2. SELECT `id`, `name` FROM stuinfo; // 键盘1旁边的着重号， 不是单引号， 表示一个字段， 用于区分关键字
+3. sqlyog ,  选中某行命令按键 F9, 执行选中命令；按键F12, 格式化选中命令；
+4. SELECT 2;
+SELECT 'john'; // 查询常量值
+
+5. SELECT `name` AS 名字 FROM stuinfo; // 起别名：便于理解， 如果要查询的字段有重名情况可以区分开来。
+// 如果别名中有空格， 要用双引号括起来
+
+// DISTINCT关键字用于去重
+ELECT DISTINCT department_id  FROM employee;
+
+// + 号在MYSQL 中只有一个功能运算符
+100+90 执行加法运算
+'123' + 90  只要其中有一个数字， 试图将字符转换为数字， 如果能转换则再执行加法运算
+如果转换失败， 则转换为0， 再用0运算
+
+mysql> SELECT CONCAT (id, `name`) FROM stuinfo;
++---------------------+
+| CONCAT (id, `name`) | // 用concat(,) 拼接字符串
++---------------------+
+| 2jack               |
++---------------------+
+1 row in set (0.00 sec) 
