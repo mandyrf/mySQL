@@ -42,3 +42,21 @@ WHERE 条件;  // where 相当于 if( )
 SELECT *
 FROM employee
 WHERE salary > 12000;  // 查询顺序：1，找表名 2，寻找满足条件的行 3，显示行的列字段
+
+SELECT *  FROM stuinfo WHERE `name` LIKE '%a%'; // name 中包含字符a
+SELECT *  FROM stuinfo WHERE `name` LIKE '_c%'; // 第二个字符为c
+SELECT *  FROM stuinfo WHERE `name` LIKE '\_c%';//包含下划线， 特殊字符包含转义
+
+SELECT * FROM employee WHERE id BETWEEN 100 AND 120;// id 属于 [100, 120], 100<=id<=120 
+
+SELECT * FROM employee WHERE id in (100, 110, 120); //在集合中精确查找
+
+SELECT `name` FROM employee WHERE rate IS NULL;  // 找出奖金率为NULL的项
+                                                 // IS NOT NULL  不为NULL
+
+alter table name1 rename as/to name2;//修改表名 name1 到 name2 
+
+SELECT 'name', id , salary*12*(IFNULL(commission, 0)) AS 年薪 FROM employee; 
+// IFNULL 的作用：如果commission为NULL就转换为0， (IFNULL(commission, 0))
+
+
